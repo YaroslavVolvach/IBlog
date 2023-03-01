@@ -16,6 +16,11 @@
     "stack": "^0.1.0",
     "uuid": "^9.0.0"
   },
+  "devDependencies": {
+    "eslint": "^7.12.1",
+    "eslint-config-prettier": "^6.15.0",
+    "prettier": "^2.1.2"
+  },
   "scripts": {
     "test": "echo",
     "start": "node server.js"
