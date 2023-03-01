@@ -52,4 +52,4 @@ function logout (request, response) {
     }
 }
 
-module.exports = {addUser, getUser, getUsers, login, logout}
+module.exports = {addUser, login, logout}
