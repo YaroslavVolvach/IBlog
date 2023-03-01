@@ -1,24 +1,5 @@
 const { User } = require("../models")
 
-function getUsers(request, response){
-    User.findAll({include: [{model: "post"}], attributes: {exclude: ['password']}})
-    .then(data => response.json(data))
-    .catch(error => {response.status(500).json(error)});
-};
-
-async function getUser(request, response){
-    const user = await User.findByPk(
-        request.params.id, {
-        attributes: {exclude: ['password']}
-    });
-
-    if (user === null) {
-        response.status(404).json({"Error": "User does not exist!"});
-    }else{
-        response.status(200).json(user)
-    }
-}
-
 function addUser(request, response){
     User.create(request.body)
     .then(data => {
